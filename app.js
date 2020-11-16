@@ -1,7 +1,7 @@
 const express = require('express')
 
 require('./db/mongoose')
-const taskRouter = require('./routers/task')
+
 const cancionRouter = require('./routers/canciones')
 
 const port = process.env.PORT

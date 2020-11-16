@@ -18,4 +18,4 @@ const Canciones = mongoose.model('canciones', {
     }
 })
 
-module.exports = Task
+module.exports = Canciones
