@@ -4,7 +4,7 @@ require('./db/mongoose')
 const taskRouter = require('./routers/task')
 
 const port = process.env.PORT
-
+const uri = `mongodb+srv://${MONGODB_USER}:${MONGODB_PSSWRD}@cluster0.s4gvp.mongodb.net/${MONGODB_DB}?retryWrites=true&w=majority`
 // express app
 const app = express();
 
