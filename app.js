@@ -2,6 +2,7 @@ const express = require('express')
 
 require('./db/mongoose')
 const taskRouter = require('./routers/task')
+const cancionRouter = require('./routers/canciones')
 
 const port = process.env.PORT
 //const uri = `mongodb+srv://${MONGODB_USER}:${MONGODB_PSSWRD}@cluster0.s4gvp.mongodb.net/${MONGODB_DB}?retryWrites=true&w=majority`
@@ -82,7 +83,7 @@ app.delete('/songs/:id', (req, res)=>{
 })
 
 app.use(express.json())
-app.use('/api',taskRouter)
+app.use('/api',cancionRouter)
 
 // 404 page
 app.use((req, res) => {
