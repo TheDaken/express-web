@@ -39,7 +39,7 @@ router.get('/canciones/:id', async (req, res) => {
 })
 
 router.patch('/canciones/:id', async (req, res) => {
-    const updates = Canciones.findById(req.params.id)
+    const updates = Object.keys(req.body)
     const allowedUpdates = ['artista', 'cancion','anyo']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
 
@@ -60,7 +60,7 @@ router.patch('/canciones/:id', async (req, res) => {
     }
 })
 
-router.delete('/cancioness/:id', async (req, res) => {
+router.delete('/canciones/:id', async (req, res) => {
     try {
         const canciones = await Canciones.findByIdAndDelete(req.params.id)
 
